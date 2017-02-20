@@ -11,192 +11,75 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
 
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="styles.css?v=1.0">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
-
-  <style>
-    /* ---- reset ---- */
-    
-    body {
-      margin: 0px;
-    }
-    
-    .background {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    /* 
-is there a better way than the absolute positioning and negative margin to center the div .content: div with background color a width and a hight?: 
-*/
-    
-    .content {
-      width: 80%;
-      border-radius: 25px;
-      border: 2px solid #00d7ff;
-      padding: 0px;
-      color: #00d7ff;
-      position: absolute;
-      left: 50%;
-      margin-left: -40%;
-      /* half width*/
-      margin-top: 50px;
-      /* half height*/
-      margin-bottom: 50px;
-    }
-    
-    .facebook-share {
-      text-align: center;
-      color: white;
-      border-radius: 25px;
-      border: 2px solid #ffffff;
-    }
-    
-    .inner-content {
-      padding: 20px;
-      font-family: 'Lato', sans-serif;
-      font-weight: 300;
-    }
-    
-    .button {
-      background-color: #00d7ff;
-      border: none;
-      color: black !important;
-      padding: 20px 40px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 18px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-    
-    .button:hover {
-      color: white !important;
-    }
-    
-    a {
-      color: white;
-    }
-    
-    a:visited {
-      color: white;
-    }
-    
-    body {
-      margin: 0;
-      font: normal 75% Arial, Helvetica, sans-serif;
-    }
-    
-    canvas {
-      display: block;
-      vertical-align: bottom;
-    }
-    
-    .videoWrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      /* 16:9 */
-      padding-top: 25px;
-      height: 0;
-      border-radius: 25px;
-      border: 2px solid #ffffff;
-      margin: 40px 0px;
-    }
-    
-    .videoWrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 95%;
-      margin: 2.5%;
-      height: 95%;
-    }
-    /* ---- particles.js container ---- */
-    
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #000000;
-      background-image: url("");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 50%;
-    }
-    /* ---- stats.js ---- */
-    
-    .count-particles {
-      background: #000022;
-      position: absolute;
-      top: 48px;
-      left: 0;
-      width: 80px;
-      color: #13E8E9;
-      font-size: .8em;
-      text-align: left;
-      text-indent: 4px;
-      line-height: 14px;
-      padding-bottom: 2px;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: bold;
-    }
-    
-    .js-count-particles {
-      font-size: 1.1em;
-    }
-    
-    #stats,
-    .count-particles {
-      -webkit-user-select: none;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-    
-    #stats {
-      border-radius: 3px 3px 0 0;
-      overflow: hidden;
-    }
-    
-    .count-particles {
-      border-radius: 0 0 3px 3px;
-    }
-
-  </style>
 </head>
 
 <body>
   <!-- particles.js container -->
   <div id="particles-js"></div>
 
-  <div class="background">
+  <div class="background" style="pointer-events: none;">
 
     <div class="content">
       <!--      <img style="float: left; width: 100%; max-width: 400px;" src="https://www.thalesarduino.com/sites/all/themes/thales/assets/images/arduino/img-intro.png" />-->
       <div class="inner-content">
-        <h1>Team DroneShell</h1>
-        <h2>In the fall of 2016, industry leader <a target="_new" href="https://www.thalesgroup.com/">Thales</a> created the Thales Arduino Challenge, designed to give insight into what life at the company is like.</h2>
-        <h2>From this challenge, we developed the DroneShell:</h3>
-        
+        <div class="header">
+          <h3>Meet</h3>
+          <h1>DroneShell</h1>
+          <h5>A secure landing, storage, and charging pad for unmanned aircraft systems.</h5>
+          <br>
+          <a href="https://www.thalesarduino.com/arduino" class="button center">Vote Now</a>
+
+          <div class="3d-model">
+            <iframe class="3d-model" allowfullscreen webkitallowfullscreen width="100%" height="300px" frameborder="0" seamless src="https://p3d.in/e/XRspV+wireonshadeless+spin+load"></iframe>
+          </div>
+        </div>
+        <div class="section">
+          <h2>What is DroneShell?</h2>
+          <p>DroneShell is a self-sustaining wireless charging system that provides a solar-powered landing platform as well as a secure shell that covers the UAS once it lands and protects it from wind and dirt. Once secure, the drone can recharge for future flight.</p>
+        </div>
+        <div class="section">
+          <h2>What is it for?</h2>
+          <p>DroneShell is designed for indsturial use, extending the travel time of UAS vehicles traveling in the smart cities of the future. Additionally, the device enables reconnaisance vehicles to be stored safely during travel (on less battery) in remote locations. </p>
+        </div>
+        <div class="section">
+          <h2>Who built it?</h2>
+          <p>In the fall of 2016, industry leader <a target="_new" href="https://www.thalesgroup.com/">Thales</a> created the Thales Arduino Challenge, designed to give insight into what life at the company is like.</p>
+          <p>From this challenge, a team of students at <a target="_new" href="http://erau.edu">Embry-Riddle Aeronautical University developed the DroneShell.</a></p>
+        </div>
+        <div class="section">
+          <h2>What's next?</h2>
+          <p>After winning at the university, state, and country levels, Team DroneShell (USA) is competing with the winners of 6 other countries in a global online vote.</p>
+        </div>
+        <div class="section no-border center">
+          <h2>
+            Visit the challenge homepage and vote Team DroneShell to support our teams hard work and make DroneShell a reality<br><br>
+            <a href="https://www.thalesarduino.com/arduino" class="button center">Vote Now</a>
+          </h2>
+          <br>
+        </div>
+
+
+<!--
+
         <div class="videoWrapper">
           <iframe src="https://www.youtube.com/embed/MgB0-m9VqBI" frameborder="0" allowfullscreen></iframe>
         </div>
-        
-        <h2>After winning in the University, State, and Country levels, <b>Team DroneShell</b> (USA) is competing with the winners of 6 other countries.</h2>
-        <h2>
-          Visit the project homepage and vote Team DroneShell to support our teams hard work:<br><br>
-          <center><a href="https://www.thalesarduino.com/arduino" class="button">Vote Now</a></center>
-        </h2>
-        <br>
-        <div class="facebook-share">
-          <h3 style="color: white;">Help spread the word and share the voting link on Facebook for #TeamDroneshell<br><br>     
+-->
+
+
+        <div class="section center">
+          <h5 style="color: white;">Help spread the word and share the voting link on Facebook for #TeamDroneshell<br><br>     
             <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.thalesarduino.com%2Farduino&layout=button_count&size=large&mobile_iframe=true&appId=217806288253424&width=103&height=28" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-          </h3>
+          </h5>
+        </div>
+        <div class="section no-border footer">
+          This website is in no way affiliated with The Thales Group and does not represent the beliefs or values of the organization.
         </div>
       </div>
     </div>
