@@ -131,7 +131,8 @@ canvas {
 }
 .3d-model {
   float: left;
-  width: 50%;
+    pointer-events: auto;
+  
 }
 .header {
   text-align: center;
