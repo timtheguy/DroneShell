@@ -1,1 +1,340 @@
-Hello world
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Thales Arduino</title>
+  <meta name="description" content="Vote Team DroneShell in the Thales Arduino competition">
+  <meta name="author" content="Team DroneShell">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+  <style>
+    /* ---- reset ---- */
+    
+    body {
+      margin: 0px;
+    }
+    
+    .background {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    /* 
+is there a better way than the absolute positioning and negative margin to center the div .content: div with background color a width and a hight?: 
+*/
+    
+    .content {
+      width: 80%;
+      border-radius: 25px;
+      border: 2px solid #00d7ff;
+      padding: 0px;
+      color: #00d7ff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -40%;
+      /* half width*/
+      margin-top: -300px;
+      /* half height*/
+      margin-bottom: 50px;
+    }
+    
+    .inner-content {
+      padding: 20px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+    }
+    
+    .button {
+      background-color: #00d7ff;
+      border: none;
+      color: black !important;
+      padding: 20px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      color: white !important;
+    }
+    
+    a {
+      color: white;
+    }
+    
+    a:visited {
+      color: white;
+    }
+    
+    body {
+      margin: 0;
+      font: normal 75% Arial, Helvetica, sans-serif;
+    }
+    
+    canvas {
+      display: block;
+      vertical-align: bottom;
+    }
+    
+    .videoWrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+      border: 2px solid #ffffff;
+      margin: 40px 0px;
+      
+    }
+    
+    .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+    }
+    /* ---- particles.js container ---- */
+    
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    /* ---- stats.js ---- */
+    
+    .count-particles {
+      background: #000022;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 80px;
+      color: #13E8E9;
+      font-size: .8em;
+      text-align: left;
+      text-indent: 4px;
+      line-height: 14px;
+      padding-bottom: 2px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold;
+    }
+    
+    .js-count-particles {
+      font-size: 1.1em;
+    }
+    
+    #stats,
+    .count-particles {
+      -webkit-user-select: none;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+    
+    #stats {
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+    }
+    
+    .count-particles {
+      border-radius: 0 0 3px 3px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- particles.js container -->
+
+  <div class="background">
+    <div id="particles-js"></div>
+
+    <div class="content">
+
+      <!--      <img style="float: left; width: 100%; max-width: 400px;" src="https://www.thalesarduino.com/sites/all/themes/thales/assets/images/arduino/img-intro.png" />-->
+      <div class="inner-content">
+        <h1>Team DroneShell</h1>
+        <h2>In the fall of 2016, industry leader <a target="_new" href="https://www.thalesgroup.com/">Thales</a> created the Thales Arduino Challenge, designed to give insight into what life at the company is like.</h2>
+        <h2>From this challenge, we developed the DroneShell:</h3>
+        
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/MgB0-m9VqBI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <h2>After winning in the University, State, and Country levels, <b>Team DroneShell</b> (USA) is competing with the winners of 6 other countries.</h2>
+        <h2>
+          Visit the project homepage and vote Team DroneShell to support our teams hard work:<br><br>
+          <center><a href="https://www.thalesarduino.com/arduino" class="button">Vote Now</a></center>
+        </h2>
+        <br>
+        <hr>
+        <center>
+          <h3 style="color: white;">Help spread the word and share the voting link on Facebook for #TeamDroneshell<br><br>
+            
+        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.thalesarduino.com%2Farduino&layout=button_count&size=large&mobile_iframe=true&appId=217806288253424&width=103&height=28" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      </h3>
+        </center>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <script src="js/scripts.js"></script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#00d7ff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 5,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);;
+
+  </script>
+</body>
+
+</html>
