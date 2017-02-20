@@ -50,6 +50,13 @@ is there a better way than the absolute positioning and negative margin to cente
       margin-bottom: 50px;
     }
     
+    .facebook-share {
+      text-align: center;
+      color: white;
+      border-radius: 25px;
+      border: 2px solid #ffffff;
+    }
+    
     .inner-content {
       padding: 20px;
       font-family: 'Lato', sans-serif;
@@ -97,6 +104,7 @@ is there a better way than the absolute positioning and negative margin to cente
       /* 16:9 */
       padding-top: 25px;
       height: 0;
+      border-radius: 25px;
       border: 2px solid #ffffff;
       margin: 40px 0px;
     }
@@ -105,8 +113,9 @@ is there a better way than the absolute positioning and negative margin to cente
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 95%;
+      margin: 2.5%;
+      height: 95%;
     }
     /* ---- particles.js container ---- */
     
@@ -168,7 +177,6 @@ is there a better way than the absolute positioning and negative margin to cente
   <div class="background">
 
     <div class="content">
-
       <!--      <img style="float: left; width: 100%; max-width: 400px;" src="https://www.thalesarduino.com/sites/all/themes/thales/assets/images/arduino/img-intro.png" />-->
       <div class="inner-content">
         <h1>Team DroneShell</h1>
@@ -185,14 +193,11 @@ is there a better way than the absolute positioning and negative margin to cente
           <center><a href="https://www.thalesarduino.com/arduino" class="button">Vote Now</a></center>
         </h2>
         <br>
-        <hr>
-        <center>
-          <h3 style="color: white;">Help spread the word and share the voting link on Facebook for #TeamDroneshell<br><br>
-            
-        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.thalesarduino.com%2Farduino&layout=button_count&size=large&mobile_iframe=true&appId=217806288253424&width=103&height=28" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-      </h3>
-        </center>
-
+        <div class="facebook-share">
+          <h3 style="color: white;">Help spread the word and share the voting link on Facebook for #TeamDroneshell<br><br>     
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.thalesarduino.com%2Farduino&layout=button_count&size=large&mobile_iframe=true&appId=217806288253424&width=103&height=28" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </h3>
+        </div>
       </div>
     </div>
   </div>
