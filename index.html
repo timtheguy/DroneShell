@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="styles.css?v=1.0">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/css/jquery.fancybox.min.css" />
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -44,7 +45,7 @@
           <h1>DroneShell</h1>
           <h5>A secure landing, storage, and charging pad for unmanned aircraft systems.</h5>
           <br>
-          <a href="http://www.youtube.com/watch?v=MgB0-m9VqBI" class="fancybox button center" title="DroneShell">Watch Video</a>
+          <a href="https://www.youtube.com/embed/MgB0-m9VqBI?autoplay=1" class="various fancybox.iframe button center" title="DroneShell">Watch Video</a>
           <a href="https://www.thalesarduino.com/arduino" class="button center">Vote Now</a>
 
           <div class="3d-model">
@@ -104,47 +105,20 @@
   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/js/jquery.fancybox.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/css/jquery.fancybox.min.css" />
   <script>
-  $(".fancybox").click(function() {
-    $.fancybox.showLoading();  
-    
-    var wrap = $('<div id="dummy"></div>').appendTo('body');
-    var el   = $(this).clone().appendTo(wrap);
-    
-    el.oembed(null, {
-        embedMethod : 'replace',
-        afterEmbed  : function(rez) {
-            var what = $(rez.code);
-            var type = 'html';
-            var scrolling = 'no';
-            
-            if (rez.type == 'photo') {
-                what = what.find('img:first').attr('src');
-                type = 'image';
-            } else if (rez.type === 'rich') {
-                scrolling = 'auto';
-            }
-
-            $.fancybox.open({
-                href      : what,
-                type      : type,
-                scrolling : scrolling,
-                title     : rez.title || $(this).attr('title'),
-                width     : 640,
-                height    : 384,
-                autoSize  : false
-            });
-            
-            wrap.remove();
-        },
-        onError : function() {
-           $.fancybox.open(this);
-        }
-    });
-    
-    return false;
-});
+  $(document).ready(function() {
+   $(".various").fancybox({
+    maxWidth	: 800,
+    maxHeight	: 600,
+    fitToView	: false,
+    width		: '70%',
+    height		: '70%',
+    autoSize	: false,
+    closeClick	: false,
+    openEffect	: 'none',
+    closeEffect	: 'none'
+   });
+  });
   </script>
   <script src="js/scripts.js"></script>
 
